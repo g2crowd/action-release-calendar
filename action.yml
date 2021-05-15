@@ -1,4 +1,4 @@
-name: GitHub Action Release Calendar
+name: Release Calendar GitHub Action
 description: This is a github actions to check whether release allowed or not based on release calendar
 
 author: Saurabh Jambhule
@@ -10,10 +10,8 @@ branding:
 inputs:
   timezone:
     description: Calendar timezone
-    default: "IN"
-  calendar_config:
-    description: Calendar config file
-    default: ".github/release_calendar.yml"
+    default: "Asia/Kolkata"
+    required: true
 
 outputs:
   release_freeze:
@@ -22,6 +20,5 @@ outputs:
 runs:
   using: docker
   image: Dockerfile
-  env:
-    TIMEZONE: ${{ inputs.timezone }}
-    CALENDER_CONFIG: ${{ inputs.calendar_config }}
+  args:
+    - ${{ inputs.timezone }}

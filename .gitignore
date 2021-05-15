@@ -146,3 +146,4 @@ cython_debug/
 # Misc
 .DS_Store
 .mypy_cache/
+.git/

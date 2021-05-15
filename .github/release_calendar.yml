@@ -1,0 +1,16 @@
+working_days:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  # - Sunday
+working_time:
+  start: 09.00
+  end: 18.00
+holidays:
+  - 2021/05/16
+  - 2021/06/30
+  - 2021/07/01
+  - 2021/09/17

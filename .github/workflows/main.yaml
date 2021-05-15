@@ -7,13 +7,15 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Run the private action
         id: release
         uses: ./
         with:
-          timezone: IN
+          timezone: 'Asia/Kolkata'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get the output
         shell: bash
