@@ -3,7 +3,7 @@
 cd /opt/app
 RESULT="false"
 
-python src/main.py $1 $2
+python src/main.py --timezone $1
 BUILD_RESULT=$?
 if [ $BUILD_RESULT -gt 0 ]; then
   RESULT="true"
