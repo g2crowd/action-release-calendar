@@ -1,0 +1,21 @@
+name: Build and Test GitHub Action
+
+on: push
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v1
+
+      - name: Run the private action
+        id: release
+        uses: ./
+        with:
+          timezone: IN
+
+      - name: Get the output
+        shell: bash
+        run: |
+          echo ${{ steps.release.outputs.release_freeze }}
