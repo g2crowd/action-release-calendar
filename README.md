@@ -13,7 +13,7 @@ This is a github actions to check whether release allowed or not based on releas
 
 ## Configuration ##
 
-Configure by creating a `.github/release_calendar.yml` file:
+Configure by creating a `.github/release_calendar.yml` file in `default branch`.
 
 For example:
 
