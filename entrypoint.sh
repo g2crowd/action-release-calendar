@@ -5,7 +5,7 @@ RESULT="false"
 
 python src/main.py --timezone $1
 BUILD_RESULT=$?
-if [ $BUILD_RESULT -gt 0 ]; then
+if [ $BUILD_RESULT -ne 0 ]; then
   RESULT="true"
 else
   RESULT="false"
