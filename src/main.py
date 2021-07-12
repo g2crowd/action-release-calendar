@@ -76,7 +76,7 @@ def is_holiday(config, date):
 def is_label_present(config, repo):
     if 'pr_labels' not in config:
         return False
-    pr = repo.get_issue(number=os.environ['PR_NUMBER'])
+    pr = repo.get_issue(number=int(os.environ['PR_NUMBER']))
     labels = pr.get_labels()
     for label in labels:
         if label.name in config['pr_labels']:
